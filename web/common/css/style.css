@@ -1,0 +1,42 @@
+/* normalize使用して空白などの初期設定を行う */
+
+#headerInner{
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+#logo{
+    float: left;
+}
+
+#headerRight{
+    float: right;
+}
+
+    #headerRight form{
+        float: left;
+        margin-right: 15px;
+    }
+    #headerRight div{
+        float: right;
+    }
+
+        #headerRight form img{
+            vertical-align: middle;
+        }
+
+
+
+#gNav{
+    clear: both;
+    width: 960px;
+    margin: 0 auto;
+}
+
+    #gNav ul{
+        display: flex;
+        padding-left: 0;
+        list-style: none;
+    }

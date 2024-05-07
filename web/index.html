@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="common/css/reset.css">
+    <!-- 上から下に読みこむためリセットcssは上に書く -->
+    <link rel="stylesheet" href="common/css/style.css">
+</head>
+<body>
+    <header>
+        <div id="headerInner">
+            <!-- 大学名と検索の箱を作る -->
+            <div id="logo">
+                <!-- ロゴはdivで囲わなくても良いけど、ブロックレベル要素にしておいたほうがレイアウトいじりやすい -->
+                <img src="./common/images/logo.png" alt="IA国際大学">
+            </div>
+            
+            <div id="headerRight">
+                <form action="">
+                    <input type="text">
+                    <img src="./common/images/search.png" alt="検索">
+                </form>
+
+                <div>
+                    <!-- 画像の意味をブラウザ側に伝えるため、ユーザビリティのため、altはseo対策のため必須 -->
+                    <img src="./common/images/btn_request.png" alt="資料請求">
+                </div>
+            </div>
+
+        </div>
+
+        <nav id="gNav">
+            <!-- メニューバーの箱を作る -->
+            <ul>
+                <!-- olはorderなので、順序が関係あるもの -->
+                <li><img src="./common/images/gnavi01.png" alt="大学案内"></li>
+                <li><img src="./common/images/gnavi02.png" alt="学部案内"></li>
+                <li><img src="./common/images/gnavi03.png" alt="国際交流"></li>
+                <li><img src="./common/images/gnavi04.png" alt="アクセス"></li>
+                <li><img src="./common/images/gnavi05.png" alt="お問い合わせ"></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
