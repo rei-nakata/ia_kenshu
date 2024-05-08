@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- jsはエラー回避のため、bodyタグの中に書くほうが良い -->
+    <!-- footerと/bodyの間に書いて、すべて読み込まれた後に実行する -->
+    <header>
+    </header>
+    <main>
+        <input type="button", onclick="action()">
+    </main>
+    <footer>
+    </footer>
+    <script>
+        window.document.write("こんにちは");// windowは省略可
+        // document.write("こんばんは");
+
+        // document.bgColor="blue";// bg=background
+
+        // alert("警告");// windowが持っている関数
+
+        console.log("こんにちは");
+        document.write("<br>");//改行
+
+        var a = 123;//変数
+        document.write(a);//参照
+        document.write("<br>");
+
+        var b = typeof a;
+        document.write(b);//データ型確認
+        document.write(typeof a);//直接確認も可
+        document.write("<br>");
+
+        var c = ["おはよう", "こんにちは", "こんばんは"];//配列
+        document.write(c[0]);//参照
+        document.write(c[1]);
+        document.write(c.length);//要素数のカウント、lengthはプロパティ
+        document.write("<br>");
+
+        var name = "中田怜奈";
+        var str = "こんにちは" + name + "さん";//文字列と変数だから変数の中身が数値でも可能
+        document.write(str);
+        document.write("<br>");
+
+        var d = 2;
+        if (d > 2) {
+            document.write("dは2より大きい");
+        }
+        else {
+            document.write("dは2以下");
+        }
+        document.write("<br>");
+
+        var e = -5;
+        if (e < 0) {
+            document.write("eの値は負です");
+        } else if (e === 0) {
+            document.write("eの値はゼロです");
+        } else if (e > 0) {
+            document.write("eの値は正です");
+        } else {
+            document.write("eは数値ではありません");
+        }
+        document.write("<br>");
+
+        for (var i = 0; i < 3; i++) {
+            document.write(i);//スペックの低いPCでは壊れる可能性あり
+        }
+        document.write("<br>");
+
+        for (var i = 0; i < 7; i++) {
+            document.write(i);
+        }
+        document.write("<br>");
+
+        for (var i = 3; i < 7; i++) {
+            document.write(i);
+        }
+        document.write("<br>");
+
+        var f = [11, 22, 33];
+        for (var i = 0; i < f.length; i++) {
+            document.write(f[i]);
+        }
+        document.write("<br>");
+
+        for (var i = 3; i >= 0; i--) {
+            document.write(i);
+        }
+        document.write("<br>");
+
+        var g1 = Math.floor(10.4);//floorは切り捨て
+        var g2 = Math.floor(10.5);
+        document.write(g1, ", ", g2);
+        document.write("<br>");
+
+        function action() {
+            document.write("クリックされました");
+            document.bgColor = "white";
+        }
+        action();//呼び出し、引数はなしバージョン
+        document.write("<br>");
+
+        function rect(width, height) {
+            var ans = width * height;
+            console.log(ans);
+        }
+        rect(10, 30);
+        document.write("<br>");
+
+    </script>
+</body>
+
+</html>
