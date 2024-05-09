@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>jQuery実践</title>
+</head>
+<body>
+  <h1>ロールオーバー</h1>
+  <img src="img/img_off.jpg" width="500" height="333" alt="お菓子作り" class="rollover">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+  $(function() {
+    $(".rollover").hover(
+      function(e){
+        //マウスオーバーしたら、画像を_onのものに変える
+        var onImg = $(this).attr("src");
+        onImg = onImg.replace("_off", "_on");
+        $(this).attr("src", onImg);
+      },
+      function(e){
+        //マウスアウトしたら、画像を_offのものに変える
+        var offImg = $(this).attr("src");
+        offImg = offImg.replace("_on", "_off");
+        $(this).attr("src", offImg);
+      }
+    );
+  });
+  </script>
+</body>
+</html>

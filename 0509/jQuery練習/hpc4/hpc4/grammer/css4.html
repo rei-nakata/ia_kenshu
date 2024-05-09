@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQeuryの基本文法</title>
+</head>
+
+<body>
+<h1>JavaScriptでCSS変更</h1>
+<ul>
+  <li class="red">りんご</li>
+  <li class="red">いちご</li>
+  <li class="yellow">バナナ</li>
+  <li class="yellow">パイナップル</li>
+</ul>
+<script>
+  var redList = document.getElementsByClassName("red");
+  for (var i = 0; i < redList.length; i++) {
+    redList[i].style.backgroundColor = "red";
+  }
+</script>
+</body>
+</html>

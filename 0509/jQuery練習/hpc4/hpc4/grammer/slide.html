@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>jQeuryの基本文法</title>
+</head>
+
+<body>
+  <h1>スライド</h1>
+  <input type="button" value="スライドアップ" id="btn1">
+  <input type="button" value="スライドダウン" id="btn2">
+  <p><img src="img1.jpg" alt="ケーキ" id="slide"></p>
+
+  <script src="jquery-3.3.1.min.js"></script>
+  <script>
+    // $(function(){
+    //   $("#btn1").on("click",function(){
+    //     $("#slide").slideUp(1000);
+    //   });
+    //   $("#btn2").on("click",function(){
+    //     $("#slide").slideDown(1000);
+    //   });
+    // });
+    $(function(){
+      $("#slide").on("mouseover", function(){
+        $(this).slideUp(1000);
+      });
+    });
+    $(function(){
+      $("#btn2").on("mouseover", function(){
+        $("#slide").slideDown(1000);
+      });
+    });
+  </script>
+</body>
+
+</html>

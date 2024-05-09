@@ -1,0 +1,28 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQeuryの基本文法</title>
+<style>
+#position{
+  width: 700px;
+  height:400px;
+  background-color: orange;
+}
+</style>
+</head>
+<body>
+<h1>座標の取得</h1>
+<div id="position"></div>
+<p id="result"></p>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+$(function(){
+  $("#position").on("click",function(e){
+    $("#result").text("X座標は:" + e.offsetX + "　Y座標は:" + e.offsetY);
+  });
+});
+</script>
+</body>
+</html>

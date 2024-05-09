@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQeuryの基本文法</title>
+</head>
+<body>
+<h1>フェード</h1>
+<input type="button" value="フェードアウト" id="btn1">
+<input type="button" value="フェードイン" id="btn2">
+<p><img src="img1.jpg" alt="ケーキ" id="fade"></p>
+
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+$(function(){
+  $("#btn1").on("click",function(){
+    $("#fade").fadeOut(1000);
+  });
+  $("#btn2").on("click",function(){
+    $("#fade").fadeIn(1000);
+  });
+});
+</script>
+</body>
+</html>

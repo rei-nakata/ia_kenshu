@@ -1,0 +1,33 @@
+@charset "UTF-8";
+*{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style-type: none;
+}
+a{
+  text-decoration:none;
+}
+#nav{
+  margin:50px 0 0 50px;
+  width:200px;
+}
+#nav li{
+  border:1px solid #fff;
+  text-align:center;
+}
+#nav li a{
+  background-color:#53C8A2;
+  color:#fff;
+  display:block;
+  height:40px;
+  padding-top:20px;
+}
+#nav li a:hover{
+  background-color:#067051;
+  color:#fff;
+}
+.hidden{
+  display:none;
+}

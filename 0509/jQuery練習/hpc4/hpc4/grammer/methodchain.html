@@ -1,0 +1,22 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQeuryの基本文法</title>
+</head>
+<body>
+<h1>メソッドチェーン</h1>
+<img src="img1.jpg" alt="" id="photo">
+<input type="button" value="点滅" id="btn">
+
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+$(function(){
+  $("#btn").on("click",function(){
+    $("#photo").fadeOut().fadeIn().fadeOut().fadeIn();
+  });
+});
+</script>
+</body>
+</html>

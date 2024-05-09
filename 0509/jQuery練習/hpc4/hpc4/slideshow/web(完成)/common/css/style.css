@@ -1,0 +1,170 @@
+@charset "utf-8";
+
+a {
+  color: #0075A9;
+}
+img {
+  border:none;
+  display:block;
+}
+ul{
+  list-style-type:none;
+  padding-left:0;
+  margin:0;
+}
+h1,h2,h3{
+  margin:0;
+}
+body {
+  font-size: 0.8em;
+  line-height: 1.7;
+  color: #362e2b;
+  background-color: #F8F8F8;
+  font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+header {
+  background-color: #FFF;
+}
+#headerInner {
+  width: 960px;
+  height: 81px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#logo {
+  float: left;
+  margin-top: 22px;
+}
+#headerSub {
+  float: right;
+}
+#headerSub form {
+  float: left;
+  margin-top: 28px;
+  margin-right: 5px;
+}
+#headerSub form input {
+  vertical-align: middle;
+}
+#headerSub form #textbox {
+  border:solid 1px #ccc;
+  border-radius: 2px;
+}
+#request {
+  float: left;
+  margin-top: 23px;
+}
+#gNavi {
+  clear: both;
+  height: 53px;
+  background-image: url(../images/bg_header.png);
+  background-repeat: repeat-x;
+}
+#gNavi ul {
+  width: 960px;
+  margin-left:auto;
+  margin-right:auto;
+  overflow:hidden;
+}
+#gNavi ul li {
+  float: left;
+}
+
+#mainPhoto {
+  width: 948px;
+  margin-left: auto;
+  margin-right: auto;
+}
+main {
+  clear:both;
+  overflow:hidden;
+  width: 948px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 22px;
+  padding-bottom: 118px;
+}
+#contentsMenu {
+  height: 87px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+#contentsMenu li {
+  float: left;
+}
+.mgr {
+  margin-right: 24px;
+}
+
+#leftContents {
+  width: 694px;
+  float: left;
+}
+#leftContents section {
+  clear: both;
+  width: 684px;
+  height: 190px;
+  background-color: #FFF;
+  padding-top: 10px;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+.contentsTitle table {
+  border: 0px;
+  margin-left: 10px;
+  margin-top: 21px;
+}
+.contentsTitle th {
+  font-weight: normal;
+  text-align: left;
+  padding-right: 20px;
+}
+.contentsTitle p {
+  width: 645px;
+  margin-top: 15px;
+  padding-left:12px;
+}
+
+aside {
+  width: 240px;
+  float: right;
+}
+#sub li {
+  margin-bottom: 15px;
+}
+
+footer {
+  clear: both;
+  height: 165px;
+  background-image: url(../images/bg_footer.png);
+  background-repeat: repeat-x;
+}
+#footerInner {
+  overflow: hidden;
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#copyright {
+  font-size: 10px;
+  color: #FFF;
+  float: left;
+  margin-top: 83px;
+}
+#footerLogo {
+  float: right;
+  margin-top: 68px;
+}
+
+/* IE対応 */
+main, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* box-shadow */
+#mainPhoto, #contentsMenu li, section, #sub li {
+  box-shadow:rgba(0, 0, 0, 0.04) 0px 0px 5px 1px;
+  -webkit-box-shadow:rgba(0, 0, 0, 0.04) 0px 0px 5px 1px;
+  -moz-box-shadow:rgba(0, 0, 0, 0.04) 0px 0px 5px 1px;
+}

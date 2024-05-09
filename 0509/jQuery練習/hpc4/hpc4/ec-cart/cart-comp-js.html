@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ECサイトの買い物かご</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="wrapper">
+
+<h1>カートに入っている商品</h1>
+<p id="explain-text">ご注文ありがとうございます。下記の項目をご入力ください。</p>
+
+<form action="sample.php" method="post">
+<table id="item-table">
+  <tr id="item-title">
+    <th class="tleft">商品名</th>
+    <th>価格(税込)</th>
+    <th>個数</th>
+    <th>小計</th>
+  </tr>
+  <tr id="item1">
+    <td class="tleft">厳選 生ジェラート</td>
+    <td><span id="js-price1">0</span>円</td>
+    <td><input type="number" max="20" min="0" value="0" id="js-num1" onchange="calc()">個</td>
+    <td><span id="js-subtotal1">0</span>円</td>
+  </tr>
+  <tr id="item2">
+    <td class="tleft">果肉いっぱい アイスキャンディ</td>
+    <td><span id="js-price2">0</span>円</td>
+    <td><input type="number" max="20" min="0" value="0" id="js-num2" onchange="calc()">個</td>
+    <td><span id="js-subtotal2">0</span>円</td>
+  </tr>
+</table>
+<div id="output_total">
+  <div id="subtotalAll"><p>商品代金</p><p><span id="js-subtotalAll">0</span>円</p></div>
+  <div id="delivery"><p>送料</p><p><span id="js-delivery">0</span>円</p></div>
+  <p id="explain-delivery">2000円以上で送料無料</p>
+</div>
+<p id="payment">合計：<span id="js-payment">0</span>円</p>
+</form>
+<ul>
+  <li id="purchase"><a href="#">購入に進む</a></li>
+  <li id="shopping"><a href="#">買い物を続ける</a></li>
+</ul>
+<script>
+  var price1 = 500; //税込み価格を定義
+  var price2 = 400; //税込み価格を定義
+  var delivery = 500; //送料
+  var num1,subtotal1,num2,subtotal2,subtotalAll,payment;
+
+  document.getElementById("js-price1").childNodes[0].data = price1;
+  document.getElementById("js-price2").childNodes[0].data = price2;
+
+  function calc(){
+    //購入する個数の取得
+    num1 = document.getElementById("js-num1").value;
+    num2 = document.getElementById("js-num2").value;
+
+    //小計の計算と表示
+    subtotal1 = price1 * num1;
+    subtotal2 = price2 * num2;
+    document.getElementById("js-subtotal1").childNodes[0].data = subtotal1;
+    document.getElementById("js-subtotal2").childNodes[0].data = subtotal2;
+
+    //商品合計の計算
+    subtotalAll = subtotal1 + subtotal2;
+    document.getElementById("js-subtotalAll").childNodes[0].data = subtotalAll;
+
+    //2000円未満の場合
+    if(subtotalAll < 2000){
+      document.getElementById("js-delivery").childNodes[0].data = delivery;
+      payment = subtotalAll + delivery;
+      document.getElementById("js-payment").childNodes[0].data = payment;
+    }else{
+      document.getElementById("js-delivery").childNodes[0].data = 0;
+      payment = subtotalAll;
+      document.getElementById("js-payment").childNodes[0].data = payment;
+    }
+
+  }
+
+</script>
+</body>
+</html>

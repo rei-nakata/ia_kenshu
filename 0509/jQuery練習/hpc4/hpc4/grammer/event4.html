@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQeuryの基本文法</title>
+</head>
+<body>
+  <h1>jQueryのイベント</h1>
+  <p>
+    <img src="img1.jpg" alt="ケーキ1" class="rollover">
+    <img src="img2.jpg" alt="ケーキ2" class="rollover">
+    <img src="img3.jpg" alt="ケーキ3" class="rollover">
+  </p>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+$(function(){
+  $(".rollover").on("mouseover",function(){
+    $(this).css("opacity",0.5);
+  });
+  $(".rollover").on("mouseout",function(){
+    $(this).css("opacity",1.0);
+  });
+});
+</script>
+</body>
+</html>

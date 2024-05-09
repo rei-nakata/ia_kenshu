@@ -1,0 +1,32 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQeuryの基本文法</title>
+<style>
+.color{
+  background-color:orange;
+}
+</style>
+</head>
+<body>
+<h1>クラスの追加と削除</h1>
+<p>この文字の背景色が変わります</p>
+<div>ここも文字の背景色が変わります</div>
+<input type="button" value="クラスの追加" id="add">
+<input type="button" value="クラスの削除" id="del">
+
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+$(function(){
+  $("#add").on("click",function(){
+    $("p,div").addClass("color");
+  });
+  $("#del").on("click",function(){
+    $("p,div").removeClass("color");
+  });
+});
+</script>
+</body>
+</html>

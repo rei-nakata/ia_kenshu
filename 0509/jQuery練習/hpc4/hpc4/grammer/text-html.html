@@ -1,0 +1,25 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQeuryの基本文法</title>
+</head>
+<body>
+<h1>内容の操作</h1>
+<p id="text">こんにちは</p>
+<p id="html">こんにちは</p>
+<input type="button" value="テキストの変更" id="change">
+
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+$(function(){
+  var message = "<b>変更しました</b>";
+  $("#change").on("click",function(){
+    $("#text").text(message);
+    $("#html").html(message);
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+</head>
+<body>
+    <p id="color">jQueryで背景色を変更</p>
+    <input type="button" id="btn" value="実行">
+    <script src="jquery.js">//上のsprictタグでjsを読み込ませる    
+    </script>
+    <script>
+        $("#color").css("background-color", "orange");
+        $("#btn").on("click", function(){
+            window.alert("クリックされました");
+        })
+        // document.getElementById("color").style.backgroundColor="orange";
+        //短く記述できる
+
+    </script>
+    
+</body>
+</html>

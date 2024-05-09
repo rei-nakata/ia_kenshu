@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>スムーススクロール</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-color: #FFF;
+    height: 200vh;
+  }
+  li {
+    list-style: none;
+  }
+  .area {
+    height: 50vh;
+    color: #FFF;
+  }
+  #area1 {
+    background-color: #588fe3;
+  }
+  #area2 {
+    background-color: #3aaade;
+  }
+  .button {
+    display: block;
+    width: 200px;
+    height: 20px;
+    background-color: #00bcd4;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    margin: 5px;
+    padding: 15px 0;
+  }
+</style>
+
+<body>
+  <div class="area">
+    <p><a href="#area1" class="button">１つ目</a></p>
+    <p><a href="#area2" class="button">２つ目</a></p>
+  </div>
+  <div class="area" id="area1">1つ目のコンテンツ</div>
+  <div class="area" id="area2">2つ目のコンテンツ</div>
+  <div><a href="#" class="button">このページの上へ</a></div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(function() {
+
+    });
+  </script>
+</body>
+</html>

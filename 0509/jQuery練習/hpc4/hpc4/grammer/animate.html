@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQeuryの基本文法</title>
+<style>
+#box{
+  width: 200px;
+  height: 200px;
+  background-color:orange;
+}
+</style>
+</head>
+<body>
+<h1>animate()メソッド</h1>
+<div id="box"></div>
+<input type="button" value="実行" id="btn">
+
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+$(function(){
+  $("#btn").on("click",function(){
+    $("#box").animate({"width": "500px"}, 1000);
+  });
+});
+</script>
+</body>
+</html>
