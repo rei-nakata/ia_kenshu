@@ -1,0 +1,12 @@
+body {
+    padding: 20px 10%;
+}
+
+#layout_l {
+    float: left;
+}
+
+#layout_r {
+    float: right;
+}
+

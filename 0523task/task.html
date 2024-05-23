@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>タスク管理</title>
+</head>
+
+<body>
+    <section id="layout_l">
+        <h1>タスク入力</h1>
+        <form action="system.php" method="get">
+            <table>
+                <tr>
+                    <td>タイトル</td>
+                    <td><input type="text" name="title" value=""></td>
+                </tr>
+                <tr>
+                    <td>締め切り</td>
+                    <td><input type="datetime-local" name="deadline" value=""></td>
+                </tr>
+                <tr>
+                    <td>優先度</td>
+                    <td>
+                        <input type="checkbox" name="priority" value="低">低
+                        <input type="checkbox" name="priority" value="中">中
+                        <input type="checkbox" name="priority" value="高">高
+                    </td>
+                </tr>
+                <tr>
+                    <td>メモ</td>
+                    <td><textarea name="memo" cols="30" rows="5"></textarea></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" name="submit" value="登録"></td>
+                    <td><input type="hidden" name="mode" value="register"></td>
+                </tr>
+            </table>
+        </form>
+    </section>
+    <section id="layout_r">
+        <h2>現在のタスク一覧</h2>
+        <table>
+            <tr>
+                <th>登録id</th>
+                <th>タイトル</th>
+                <th>締め切り</th>
+                <th>優先度</th>
+                <th>メモ</th>
+            </tr>
+            !block!
+        </table>
+        <h2>過去のタスク一覧</h2>
+        <table>
+            <th>登録id</th>
+            <th>タイトル</th>
+            <th>締め切り</th>
+            <th>優先度</th>
+            <th>メモ</th>
+            !place!
+        </table>
+    </section>
+</body>
+
+</html>
